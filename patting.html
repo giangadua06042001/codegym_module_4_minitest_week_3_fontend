@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="patting.js"></script>
+</head>
+<body  onload="successHandler()">
+<form id="createProduct">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <label>
+                    <input type="text" placeholder="name" id="name">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>
+                <label>
+                    <input type="number" placeholder="weight" id="weigh">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>
+                <label>
+                    <input type="number" placeholder="height" id="height">
+                </label>
+            </td>
+        </tr>
+         <tr>
+            <td>material</td>
+            <td>
+                <label>
+                    <input type="text" placeholder="material" id="material">
+                </label>
+            </td>
+        </tr>
+         <tr>
+            <td>Price</td>
+            <td>
+                <label>
+                    <input type="number" placeholder="height" id="price">
+                </label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" onclick="addNewPainting()" value="SaveProduct">
+            </td>
+        </tr>
+    </table>
+</form>
+<table border="1" id="paintingList">
+    <tr>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Material</th>
+        <th>Price</th>
+        <th>Delete</th>
+    </tr>
+</table>
+</body>
+</html>
