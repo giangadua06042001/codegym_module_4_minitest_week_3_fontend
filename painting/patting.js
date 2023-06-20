@@ -60,3 +60,26 @@ function deleteRecord(id) {
         }
     })
 }
+$(document).ready(function() {
+    $('#searchBtn').click(function() {
+        var searchKey = $('#search').val();
+        if (searchKey.trim() != '') {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8080/painting/search',
+                data: { search: searchKey },
+                beforeSend: function() {
+                    $('#result').html('<img src="loading.gif"> Đang tìm kiếm...');
+                },
+                success: function(response) {
+                    $('#result').html(response);
+                },
+                error: function() {
+                    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+                }
+            });
+        } else {
+            alert('Vui lòng nhập từ khóa tìm kiếm.');
+        }
+    });
+});
